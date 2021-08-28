@@ -20,6 +20,6 @@ export const backColor = StyleSheet.create({
     backgroundColor: "#F7D86D",
   },
   White: {
-    colbackgroundColoror: "#FFFFFF",
+    backgroundColor: "#FFFFFF",
   },
 });
