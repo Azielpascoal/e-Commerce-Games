@@ -7,32 +7,49 @@ export const Container = styled.SafeAreaView`
 `;
 export const Top = styled.SafeAreaView`
   width: 100%;
-  height: 200px;
+  height: 250px;
   background-color: #f7d86d;
+  justify-content: center;
+  align-items: center;
 `;
 export const ProductArea = styled.ScrollView`
   width: 100%;
   flex: 1;
   border-top-right-radius: 35px;
+  margin-top: -60px;
+  background-color: #fff;
+  padding:4%;
 `;
-export const ProductCard = styled.SafeAreaView`
-  width: 95%;
+export const ProductCard = styled.TouchableOpacity`
+  width: 100%;
   height: 150px;
   border-radius: 15px;
   border-color: #f1f1f1;
   border-width: 1px;
   flex-direction: row;
+  align-self: center;
+  margin-top: 4%;
+  justify-content: center;
+  align-items: center;
 `;
 export const ProductImage = styled.Image`
   width: 100px;
   height: 100px;
+  background-color: #fafafa;
+  border-radius: 8px;
 `;
 export const ProductInfoArea = styled.SafeAreaView`
-  width: 70%;
-  height: 100%;
+  width: 65%;
+  height: 100px;
+  margin-left: 2%;
+  border-color:#fafafa;
+  border-width: 1px;
+  border-radius:8px;
+  justify-content: center;
+  padding:2%;
 `;
 export const InfoText = styled.Text`
-  font-size: 14px;
+  font-size: 16px;
   font-family: Poppins-Medium;
   color: #1a2a3a;
 `;
