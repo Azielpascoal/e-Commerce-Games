@@ -7,7 +7,10 @@ const stack = createStackNavigator();
 export default () => {
   return (
     <stack.Navigator
-        initialRouteName="Home"
+      initialRouteName="Home"
+      screenOptions={{
+        headerShown: false,
+      }}
     >
       <stack.Screen name="Home" component={HomePage} />
     </stack.Navigator>
