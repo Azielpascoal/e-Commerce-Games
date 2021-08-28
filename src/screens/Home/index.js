@@ -1,7 +1,7 @@
 import React, { useEffect ,useState} from "react";
 import {} from "./style";
 import { View,Text,TouchableOpacity,Image,ScrollView} from "react-native";
-import Products from "../services/products.json";
+import Products from "../../services/products.json";
 
 
 export default function Home() {
