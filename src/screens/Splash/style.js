@@ -12,9 +12,10 @@ export const Image = styled.Image`
     height:350px;
 `;
 export const Text = styled.Text`
-    font-size: 16px;
+    font-size: 14px;
     color:#1a2a3a;
     text-align: center;
+    font-family: Poppins-Regular;
     
 `;
 export const Buttom = styled.TouchableOpacity`

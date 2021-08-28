@@ -7,7 +7,7 @@ export default function Splash(){
     return(
         <Container>
             <Image source={SplashImage}/>
-            <Text>Ola!,seja Bem-Vindo ao seu aplicativo de venda de jogos,para começar clique em loja virtual.</Text>
+            <Text>Olá !seja Bem-Vindo ao seu aplicativo de venda de jogos.Para começar clique em loja virtual.</Text>
             <Buttom>
                 <Text>Loja virtual</Text>
             </Buttom>
