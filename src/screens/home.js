@@ -18,12 +18,14 @@ export default function Home() {
   return (    
       <ScrollView style={{backgroundColor:'#fff',flex:1}} horizontal={true}>
           {
-            products.map((index,key)=>{              
+            products.map((index,key)=>{       
+            
               return(
+                console.log("Image :",index.image),       
                 <View style={{ width:300,height:300,borderColor:'#f1f1f1',borderWidth:1,alignItems:'center',justifyContent:'center',alignSelf:'center',marginRight:15}} key={key}>
-                
-                  <Image style={{width:150,height:150}}  source={ require(`../assets/`+`${index.image}`)}/>
-                  <Text>Nome do jogo: {index.name}</Text>
+                  
+                  <Image style={{width:150,height:150}} />
+                  <Text>Nome do jogo: {index.image}</Text>
                   <Text>Preço :${index.price}</Text>
                   <Text>Pontuação :{index.score}</Text>
                   <TouchableOpacity style={{backgroundColor:'#ff0f0f',width:140,height:20,alignItems:'center',borderRadius:10}}>
