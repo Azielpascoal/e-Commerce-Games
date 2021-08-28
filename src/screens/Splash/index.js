@@ -1,16 +1,25 @@
-import React from 'react'
-import {Container,Image,Text,Buttom} from './style'
-import SplashImage from '../../assets/splash.gif'
+import React from "react";
+import { Container, Image, Text, Buttom } from "./style";
+import { useNavigation } from "@react-navigation/native";
+import SplashImage from "../../assets/splash.gif";
 
-
-export default function Splash(){
-    return(
-        <Container>
-            <Image source={SplashImage}/>
-            <Text>Olá !seja Bem-Vindo ao seu aplicativo de venda de jogos.Para começar clique em loja virtual.</Text>
-            <Buttom>
-                <Text>Loja virtual</Text>
-            </Buttom>
-        </Container>
-    );
+export default function Splash() {
+  const navigation = useNavigation();
+  const onButtomPress = () => {
+    navigation.reset({
+      routes: [{ name: "Home" }],
+    });
+  };
+  return (
+    <Container>
+      <Image source={SplashImage} />
+      <Text>
+        Olá !seja Bem-Vindo ao seu aplicativo de venda de jogos.Para começar
+        clique em loja virtual.
+      </Text>
+      <Buttom onPress={onButtomPress}>
+        <Text>Loja virtual</Text>
+      </Buttom>
+    </Container>
+  );
 }
