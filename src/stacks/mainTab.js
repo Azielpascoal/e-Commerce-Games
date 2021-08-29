@@ -1,8 +1,8 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import {StyleSheet} from "react-native"
+import { StyleSheet } from "react-native";
 import HomePage from "../screens/Home";
-import CartPage from "../screens/Cart"
+import CartPage from "../screens/Cart";
 
 const tab = createBottomTabNavigator();
 export default () => {
