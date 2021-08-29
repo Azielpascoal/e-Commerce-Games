@@ -13,10 +13,9 @@ import {
 } from "./style";
 import Products from "../../services/products.json";
 import { FlatList } from "react-native";
-
+import {useCart} from "../../context/cart"
 export default function Home() {
   // const [products, setProducts] = useState([]);
-
   //   useEffect(() => {
   //     const AllProducts = Products.map((product) => {
   //       return product;
@@ -24,6 +23,7 @@ export default function Home() {
   //     setProducts(AllProducts);
   //     console.log("Data", AllProducts)
   //   }, [products]);
+  const {add}=useCart()
   const products = Products.map((product) => {
     return product;
   });
@@ -45,7 +45,7 @@ export default function Home() {
         }}
         renderItem={({ index }) => {
           return (
-            <ProductCard key={key}>
+            <ProductCard onPress={add(index)} >
               <ProductImage source={{ uri: index.image }} />
               <ProductInfoArea>
                 <ProductInfoText>Nome:{index.name}</ProductInfoText>
