@@ -8,17 +8,15 @@ import {
   ProductInfoText,
   InfoText,
 } from "./style";
-import Products from "../../services/products.json";
 import { FlatList } from "react-native";
-import {useCart} from "../../context/cart"
+import { useCart } from "../../context/cart";
 export default function Home() {
-  const {remove,cart}=useCart()
- 
-
+  const { remove, cart, totalvalue } = useCart();
   return (
     <Container>
       <Top>
         <InfoText>Produtos adicionados ao carrinho</InfoText>
+        <InfoText>Valor total :{totalvalue}</InfoText>
       </Top>
       <FlatList
         data={cart}
@@ -30,9 +28,9 @@ export default function Home() {
           backgroundColor: "#fff",
           padding: "4%",
         }}
-        renderItem={({ item,index }) => {
+        renderItem={({ item, index }) => {
           return (
-            <ProductCard onPress={remove(index)} >
+            <ProductCard onPress={remove(index)}>
               <ProductImage source={{ uri: item.image }} />
               <ProductInfoArea>
                 <ProductInfoText>Nome:{item.name}</ProductInfoText>
