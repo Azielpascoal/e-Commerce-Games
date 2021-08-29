@@ -4,10 +4,13 @@ const cartContext = createContext();
 export default function cartProvider({ children }) {
   const [cart, setCart] = useState([]);
   const [totalvalue, setTotalValue] = useState();
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
   const add = ({ item }) => {
     const newCart = cart;
     newCart.push(item);
-    setCart(item);
+    setCart([...item]);
   };
   const store = {
     add,
