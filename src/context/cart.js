@@ -16,10 +16,15 @@ export default function cartProvider({ children }) {
   const add = ({ item }) => {
     const newCart = cart;
     newCart.push(item);
-    setCart([...item]);
+    setCart([...newCart]);
+  };
+  const remove = ({ index }) => {
+    let newCart = cart.filter((item, i) => i !== index);
+    setCart([...newCart]);
   };
   const store = {
     add,
+    remove,
     cart,
     totalvalue,
   };
@@ -27,9 +32,10 @@ export default function cartProvider({ children }) {
 }
 export function useCart() {
   const context = useContext(cartContext);
-  const { add, cart, totalvalue } = context;
+  const { add, remove, cart, totalvalue } = context;
   return {
     add,
+    remove,
     cart,
     totalvalue,
   };
