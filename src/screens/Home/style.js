@@ -22,7 +22,7 @@ export const ProductArea = styled.ScrollView`
 `;
 export const ProductCard = styled.TouchableOpacity`
   width: 100%;
-  height: 150px;
+  height: 180px;
   border-radius: 15px;
   border-color: #f1f1f1;
   border-width: 1px;
@@ -31,15 +31,16 @@ export const ProductCard = styled.TouchableOpacity`
   margin-top: 4%;
   justify-content: center;
   align-items: center;
+  margin-bottom: 8%;
 `;
 export const ProductImage = styled.Image`
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 150px;
   background-color: #fafafa;
   border-radius: 8px;
 `;
 export const ProductInfoArea = styled.SafeAreaView`
-  width: 65%;
+  width: 60%;
   height: 100px;
   margin-left: 2%;
   border-color:#fafafa;

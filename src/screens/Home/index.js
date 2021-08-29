@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Container,
   Top,
@@ -14,20 +14,39 @@ import {
 import Products from "../../services/products.json";
 
 export default function Home() {
+  const [products, setProducts] = useState([]);
+
+  console.log("gfhjklç",Products.map((i)=>{
+      return i.image
+  }))
+//   useEffect(() => {
+//     const AllProducts = Products.map((product) => {
+//       return product;
+//     });
+//     setProducts(AllProducts);
+//     console.log("Data", AllProducts)
+//   }, [products]);
+
   return (
     <Container>
       <Top>
         <InfoText>Bem vindo ao e-commerce games</InfoText>
       </Top>
       <ProductArea>
-        <ProductCard>
-            <ProductImage/>
-            <ProductInfoArea>
-                <ProductInfoText>Nome: </ProductInfoText>
-                <ProductInfoText>Preço: </ProductInfoText>
-                <ProductInfoText>Score: </ProductInfoText>
-            </ProductInfoArea>
-        </ProductCard>
+        {Products.map((index, key) => {
+           
+          return (
+            console.log("Aqui !",index.name),
+            <ProductCard key={key} >
+              <ProductImage source={{uri:index.image}}/>
+              <ProductInfoArea>
+                <ProductInfoText>Nome:{index.name}</ProductInfoText>
+                <ProductInfoText>Preço:${index.price}</ProductInfoText>
+                <ProductInfoText>Score:{index.score}</ProductInfoText>
+              </ProductInfoArea>
+            </ProductCard>
+          );
+        })} 
       </ProductArea>
     </Container>
   );
