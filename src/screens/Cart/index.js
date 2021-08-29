@@ -2,31 +2,18 @@ import React, { useState, useEffect } from "react";
 import {
   Container,
   Top,
-  ProductArea,
   ProductCard,
   ProductImage,
   ProductInfoArea,
   ProductInfoText,
   InfoText,
-  CartButtom,
-  CartImage,
 } from "./style";
 import Products from "../../services/products.json";
 import { FlatList } from "react-native";
 import {useCart} from "../../context/cart"
 export default function Home() {
-  // const [products, setProducts] = useState([]);
-  //   useEffect(() => {
-  //     const AllProducts = Products.map((product) => {
-  //       return product;
-  //     });
-  //     setProducts(AllProducts);
-  //     console.log("Data", AllProducts)
-  //   }, [products]);
-  const {add}=useCart()
-  const products = Products.map((product) => {
-    return product;
-  });
+  const {add,cart}=useCart()
+ 
 
   return (
     <Container>
@@ -34,7 +21,7 @@ export default function Home() {
         <InfoText>Bem vindo ao e-commerce games</InfoText>
       </Top>
       <FlatList
-        data={products}
+        data={cart}
         contentContainerStyle={{
           width: "100%",
           flex: 1,
