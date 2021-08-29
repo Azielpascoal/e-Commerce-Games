@@ -3,6 +3,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { StyleSheet } from "react-native";
 import HomePage from "../screens/Home";
 import CartPage from "../screens/Cart";
+import { useCart } from "../context/cart";
+import { View, Text } from "react-native";
 
 const tab = createBottomTabNavigator();
 export default () => {
@@ -21,10 +23,22 @@ export default () => {
       }}
     >
       <tab.Screen name="Home" component={HomePage} />
-      <tab.Screen name="Carrinho" component={CartPage} />
+      <tab.Screen
+        name="Carrinho"
+        component={CartPage}
+        options={{ tabBarIcon: iconCart }}
+      />
     </tab.Navigator>
   );
 };
+function iconCart() {
+  const { cart } = useCart();
+  return (
+    <View>
+      <Text>{Object.keys(cart.length)}</Text>
+    </View>
+  );
+}
 const style = StyleSheet.create({
   shadow: {
     shadowColor: "#000000",
