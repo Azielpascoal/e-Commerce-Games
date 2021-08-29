@@ -12,7 +12,7 @@ import Products from "../../services/products.json";
 import { FlatList } from "react-native";
 import {useCart} from "../../context/cart"
 export default function Home() {
-  const {add,cart}=useCart()
+  const {remove,cart}=useCart()
  
 
   return (
@@ -30,19 +30,19 @@ export default function Home() {
           backgroundColor: "#fff",
           padding: "4%",
         }}
-        renderItem={({ index }) => {
+        renderItem={({ item,index }) => {
           return (
-            <ProductCard onPress={add(index)} >
-              <ProductImage source={{ uri: index.image }} />
+            <ProductCard onPress={remove(index)} >
+              <ProductImage source={{ uri: item.image }} />
               <ProductInfoArea>
-                <ProductInfoText>Nome:{index.name}</ProductInfoText>
-                <ProductInfoText>Preço:${index.price}</ProductInfoText>
-                <ProductInfoText>Score:{index.score}</ProductInfoText>
+                <ProductInfoText>Nome:{item.name}</ProductInfoText>
+                <ProductInfoText>Preço:${item.price}</ProductInfoText>
+                <ProductInfoText>Score:{item.score}</ProductInfoText>
               </ProductInfoArea>
             </ProductCard>
           );
         }}
-        keyExtractor={(index) => index.id}
+        keyExtractor={(item) => item.id}
       ></FlatList>
     </Container>
   );
