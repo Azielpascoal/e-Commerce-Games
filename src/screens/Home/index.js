@@ -15,10 +15,6 @@ import Products from "../../services/products.json";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
-
-  console.log("gfhjklç",Products.map((i)=>{
-      return i.image
-  }))
 //   useEffect(() => {
 //     const AllProducts = Products.map((product) => {
 //       return product;
@@ -36,7 +32,6 @@ export default function Home() {
         {Products.map((index, key) => {
            
           return (
-            console.log("Aqui !",index.name),
             <ProductCard key={key} >
               <ProductImage source={{uri:index.image}}/>
               <ProductInfoArea>
