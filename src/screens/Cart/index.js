@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <Container>
       <Top>
-        <InfoText>Bem vindo ao e-commerce games</InfoText>
+        <InfoText>Produtos adicionados ao carrinho</InfoText>
       </Top>
       <FlatList
         data={cart}
