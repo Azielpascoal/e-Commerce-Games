@@ -43,19 +43,19 @@ export default function Home() {
           backgroundColor: "#fff",
           padding: "4%",
         }}
-        renderItem={({ index }) => {
+        renderItem={({ item }) => {
           return (
-            <ProductCard onPress={add(index)} >
-              <ProductImage source={{ uri: index.image }} />
+            <ProductCard onPress={add(item)} >
+              <ProductImage source={{ uri: item.image }} />
               <ProductInfoArea>
-                <ProductInfoText>Nome:{index.name}</ProductInfoText>
-                <ProductInfoText>Preço:${index.price}</ProductInfoText>
-                <ProductInfoText>Score:{index.score}</ProductInfoText>
+                <ProductInfoText>Nome:{item.name}</ProductInfoText>
+                <ProductInfoText>Preço:${item.price}</ProductInfoText>
+                <ProductInfoText>Score:{item.score}</ProductInfoText>
               </ProductInfoArea>
             </ProductCard>
           );
         }}
-        keyExtractor={(index) => index.id}
+        keyExtractor={(item) => item.id}
       ></FlatList>
     </Container>
   );
