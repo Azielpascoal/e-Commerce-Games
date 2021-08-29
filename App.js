@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import MainStack from "./src/stacks/mainStack";
 import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
+import cartProvider from "./src/context/cart";
 
 export default function e_commerceApp() {
   let [fontsLoaded] = useFonts({
@@ -16,10 +17,12 @@ export default function e_commerceApp() {
     return <AppLoading />;
   } else {
     return (
-      <NavigationContainer>
-        <StatusBar style="dark" />
-        <MainStack />
-      </NavigationContainer>
+      <cartProvider>
+        <NavigationContainer>
+          <StatusBar style="dark" />
+          <MainStack />
+        </NavigationContainer>
+      </cartProvider>
     );
   }
 }
