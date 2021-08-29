@@ -1,10 +1,16 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
 
 const cartContext = createContext();
+
 export default function cartProvider({ children }) {
   const [cart, setCart] = useState([]);
   const [totalvalue, setTotalValue] = useState();
   useEffect(() => {
+    let value = 0;
+    cart.map((item) => {
+      value = value + item.price;
+      setTotalValue(value);
+    });
     console.log(cart);
   }, [cart]);
   const add = ({ item }) => {
