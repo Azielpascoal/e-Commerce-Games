@@ -6,9 +6,9 @@ import SplashImage from "../../assets/splash.gif";
 export default function Splash() {
   const navigation = useNavigation();
   const onButtomPress = () => {
-    // navigation.reset({
-    //   routes: [{ name: "Home" }],
-    // });
+    navigation.reset({
+      routes: [{ name: "MainTab" }],
+    });
   };
   return (
     <Container>
