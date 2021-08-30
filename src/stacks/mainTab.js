@@ -5,6 +5,7 @@ import HomePage from "../screens/Home";
 import CartPage from "../screens/Cart";
 import { useCart } from "../context/cart";
 import { View, Text } from "react-native";
+import cartProvider from "../context/cart";
 
 const tab = createBottomTabNavigator();
 export default () => {
@@ -31,11 +32,11 @@ export default () => {
     </tab.Navigator>
   );
 };
-function iconCart() {
+export const iconCart=() =>{
   const { cart } = useCart();
   return (
     <View>
-      <Text>{Object.keys(cart.length)}</Text>
+      {/* <Text>{Object.keys(cart.length)}</Text> */}
     </View>
   );
 }
