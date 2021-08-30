@@ -23,7 +23,8 @@ export default function Home() {
   //     setProducts(AllProducts);
   //     console.log("Data", AllProducts)
   //   }, [products]);
-  const {add}=useCart()
+  const {add}=useCart();
+  console.log(add,"teste")
   const products = Products.map((product) => {
     return product;
   });
@@ -33,8 +34,25 @@ export default function Home() {
       <Top>
         <InfoText>Bem vindo ao e-commerce games</InfoText>
       </Top>
-      <FlatList
+      <ProductArea>
+        {
+          products.map((item)=>{
+            return (
+              <ProductCard onPress={()=>add(item)} key={item.id} >
+                <ProductImage source={{ uri: item.image }} />
+                <ProductInfoArea>
+                  <ProductInfoText>Nome:{item.name}</ProductInfoText>
+                  <ProductInfoText>Preço:${item.price}</ProductInfoText>
+                  <ProductInfoText>Score:{item.score}</ProductInfoText>
+                </ProductInfoArea>
+              </ProductCard>
+            );
+          })
+        }
+      </ProductArea>
+      {/* <FlatList
         data={products}
+        scrollEnabled={true}
         contentContainerStyle={{
           width: "100%",
           flex: 1,
@@ -45,7 +63,8 @@ export default function Home() {
         }}
         renderItem={({ item }) => {
           return (
-            <ProductCard onPress={add(item)} >
+            console.log("ddd",item),
+            <ProductCard onPress={()=>add(item)} >
               <ProductImage source={{ uri: item.image }} />
               <ProductInfoArea>
                 <ProductInfoText>Nome:{item.name}</ProductInfoText>
@@ -56,7 +75,7 @@ export default function Home() {
           );
         }}
         keyExtractor={(item) => item.id}
-      ></FlatList>
+      ></FlatList> */}
     </Container>
   );
 }
