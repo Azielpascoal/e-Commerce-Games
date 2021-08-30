@@ -24,7 +24,7 @@ export default function Home() {
         {
         cart.map((item, index) => {
           return (
-            <ProductCard onPress={() => remove(index)}>
+            <ProductCard onPress={() => remove(index)} key={index}>
               <ProductImage source={{ uri: item.image }} />
               <ProductInfoArea>
                 <ProductInfoText>Nome:{item.name}</ProductInfoText>
