@@ -20,9 +20,9 @@ export const ProductArea = styled.ScrollView`
   background-color: #fff;
   padding:4%;
 `;
-export const ProductCard = styled.TouchableOpacity`
+export const ProductCard = styled.SafeAreaView`
   width: 100%;
-  height: 180px;
+  height: 190px;
   border-radius: 15px;
   border-color: #f1f1f1;
   border-width: 1px;
@@ -59,8 +59,17 @@ export const ProductInfoText = styled.Text`
   font-family: Poppins-Regular;
   color: #1a2a3a;
 `;
-export const CartButtom = ``;
+export const CartButtom = styled.TouchableOpacity`
+width:100px;
+  height:40px;
+  background-color: #f7d86d;
+  align-items: center;
+  justify-content: center;
+  border-radius:8px;
+  flex-direction: row;
+  `;
 export const CartImage = styled.Image`
   width: 25px;
   height: 25px;
+  tint-color:#1a2a3a;
 `;
