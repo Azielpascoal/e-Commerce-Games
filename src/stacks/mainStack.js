@@ -8,7 +8,7 @@ const stack = createStackNavigator();
 export default () => {
   return (
     <stack.Navigator
-      initialRouteName="MainTab"
+      initialRouteName="Splash"
       screenOptions={{
         headerShown: false,
       }}
