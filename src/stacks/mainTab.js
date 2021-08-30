@@ -9,6 +9,7 @@ import CartIcon from "../assets/shopping-cart.png";
 
 const tab = createBottomTabNavigator();
 export default () => {
+   const { cart } = useCart();
   return (
     <tab.Navigator
       initialRouteName="Home"
@@ -37,13 +38,13 @@ export default () => {
       <tab.Screen
         name="Carrinho"
         component={CartPage}
-        options={{ tabBarIcon: iconCart }}
+        options={{ tabBarIcon: iconCart,tabBarBadge:cart.length}}
       />
     </tab.Navigator>
   );
 };
 export const iconCart = ({focused}) => {
-  const { cart } = useCart();
+ 
   return (
     <View
       style={{
@@ -62,7 +63,7 @@ export const iconCart = ({focused}) => {
         source={CartIcon}
         style={{ width: 35, height: 35, tintColor: "#000",alignSelf:'center',marginLeft:12 }}
       />
-      <Text style={{backgroundColor:'#f00',borderRadius:18,marginBottom:15,marginRight:14}}>{Object.keys(cart.length)}</Text>
+      <Text style={{backgroundColor:'#f00',borderRadius:18,marginBottom:15,marginRight:14}}></Text>
     </View>
   );
 };
