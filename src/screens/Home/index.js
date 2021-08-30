@@ -12,19 +12,11 @@ import {
   CartImage,
 } from "./style";
 import Products from "../../services/products.json";
-import { FlatList } from "react-native";
-import {useCart} from "../../context/cart"
+import { Rating } from "react-native-ratings";
+import { useCart } from "../../context/cart";
 export default function Home() {
-  // const [products, setProducts] = useState([]);
-  //   useEffect(() => {
-  //     const AllProducts = Products.map((product) => {
-  //       return product;
-  //     });
-  //     setProducts(AllProducts);
-  //     console.log("Data", AllProducts)
-  //   }, [products]);
-  const {add}=useCart();
-  console.log(add,"teste")
+  const { add } = useCart();
+  console.log(add, "teste");
   const products = Products.map((product) => {
     return product;
   });
@@ -35,47 +27,24 @@ export default function Home() {
         <InfoText>Bem vindo ao e-commerce games</InfoText>
       </Top>
       <ProductArea>
-        {
-          products.map((item)=>{
-            return (
-              <ProductCard onPress={()=>add(item)} key={item.id} >
-                <ProductImage source={{ uri: item.image }} />
-                <ProductInfoArea>
-                  <ProductInfoText>Nome:{item.name}</ProductInfoText>
-                  <ProductInfoText>Preço:${item.price}</ProductInfoText>
-                  <ProductInfoText>Score:{item.score}</ProductInfoText>
-                </ProductInfoArea>
-              </ProductCard>
-            );
-          })
-        }
-      </ProductArea>
-      {/* <FlatList
-        data={products}
-        scrollEnabled={true}
-        contentContainerStyle={{
-          width: "100%",
-          flex: 1,
-          borderTopRightRadius: 35,
-          marginTop: -60,
-          backgroundColor: "#fff",
-          padding: "4%",
-        }}
-        renderItem={({ item }) => {
+        {products.map((item) => {
           return (
-            console.log("ddd",item),
-            <ProductCard onPress={()=>add(item)} >
+            <ProductCard onPress={() => add(item)} key={item.id}>
               <ProductImage source={{ uri: item.image }} />
               <ProductInfoArea>
                 <ProductInfoText>Nome:{item.name}</ProductInfoText>
                 <ProductInfoText>Preço:${item.price}</ProductInfoText>
-                <ProductInfoText>Score:{item.score}</ProductInfoText>
+                <ProductInfoText> <Rating
+                ratingColor="#3498db"
+                ratingBackgroundColor="#c8c7c8"
+                ratingCount={5}
+                imageSize={10}
+              />{item.score}</ProductInfoText>
               </ProductInfoArea>
             </ProductCard>
           );
-        }}
-        keyExtractor={(item) => item.id}
-      ></FlatList> */}
+        })}
+      </ProductArea>
     </Container>
   );
 }
