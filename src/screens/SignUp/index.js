@@ -36,7 +36,7 @@ export default function Splash() {
         <InputArea>
         <SignInput placeholder="DIGITE SEU NOME COMPLETO" type="email-address" source={Nome}/>
         <SignInput placeholder="DIGITE SEU EMAIL" type="email-address" source={Email}/>
-          <SignInput placeholder="DIGITE SUA SENHA" type="password" password source={Password}/>
+          <SignInput placeholder="DIGITE SUA SENHA"  password source={Password}/>
         </InputArea>
       </InfoArea>
       <ButtomArea>
