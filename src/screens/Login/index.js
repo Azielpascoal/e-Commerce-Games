@@ -19,6 +19,7 @@ import Login from "../../assets/get.png";
 import Email from "../../assets/em.png";
 import Password from "../../assets/password.png";
 import SignInput from "../../components/SignInput/SignInput"
+import Top from "../../components/Top/headertop"
 
 export default function Splash() {
   const navigation = useNavigation();
@@ -34,7 +35,7 @@ export default function Splash() {
         <TextClick>FAÇA SEU LOGIN</TextClick>
         <InputArea>
           <SignInput placeholder="DIGITE SEU EMAIL" type="email-address" source={Email}/>
-          <SignInput placeholder="DIGITE SUA SENHA" type="password" password source={Password}/>
+          <SignInput placeholder="DIGITE SUA SENHA" password source={Password}/>
         </InputArea>
       </InfoArea>
       <ButtomArea>
