@@ -13,8 +13,8 @@ export const Image = styled.Image`
 `;
 export const ImageLogin = styled.Image`
    tint-color:#fff;
-   width:35px;
-   height: 25px;
+   width:25px;
+   height: 15px;
 `;
 export const ImageS = styled.Image`
     margin-top: 4%;
@@ -37,13 +37,13 @@ export const TextClick = styled.Text`
     
 `;
 export const Buttom = styled.TouchableOpacity`
-    width:80px;
+     width:60px;
     height:45px;
-    border-radius: 12px;
+    border-radius: 18px;
     background-color:#6200c4;
     justify-content: center;
     align-items: center;
-    margin-top: -30px;
+    margin-top: -32px;
 `;
 export const ButtomClick = styled.TouchableOpacity`
    
