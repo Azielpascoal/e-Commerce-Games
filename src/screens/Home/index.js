@@ -25,6 +25,7 @@ import { useCart } from "../../context/cart";
 import CartIcon from "../../assets/shopping-cart.png";
 import ShopPaper from "../../assets/back3.png";
 import Games from "../../assets/console.png";
+import TopB from "../../components/Top/headertop";
 export default function Home() {
   const { add } = useCart();
   console.log(add, "teste");
@@ -34,6 +35,7 @@ export default function Home() {
 
   return (
     <Container>
+      <TopB/>
       <Top>
         <TopInfo>
           <TopInfoText
@@ -65,7 +67,7 @@ export default function Home() {
         CATEGORIAS
       </TopInfoText>
       <TopInfo style={{backgroundColor:'#fafafa',borderRadius:12,...style.shadow}}>
-        <CartButtom style={{ width:55,height:50,marginLeft: 10 }} >
+        <CartButtom style={{ width:50,height:45,marginLeft: 10 }} >
           <CartImage source ={Games}/>
         
         </CartButtom>
