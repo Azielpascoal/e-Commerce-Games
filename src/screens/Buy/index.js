@@ -23,6 +23,7 @@ import { AirbnbRating } from "react-native-ratings";
 import { useCart } from "../../context/cart";
 import CardIcon from "../../assets/card.png";
 import { useNavigation } from "@react-navigation/native";
+import TopB from "../../components/Top/headertop";
 export default function Home() {
   const navigation = useNavigation();
   const { remove, cart, totalvalue, subtotalvalue, setCart } = useCart();
@@ -50,6 +51,7 @@ export default function Home() {
   }
   return (
     <Container>
+      <TopB/>
       <Top>
         <TopInfo>
           <TopInfoText
