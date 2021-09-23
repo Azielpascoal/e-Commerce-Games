@@ -14,7 +14,7 @@ export const Top = styled.SafeAreaView`
 `;
 export const TopInfo = styled.SafeAreaView`
   width:90%;
-  height: 60px;
+  height: 80px;
   align-self: center;
   align-self: center;
   justify-content:center;
@@ -30,14 +30,20 @@ export const TopInfoArea = styled.SafeAreaView`
   margin-top: 2%;
 `;
 export const TopInfoAreaComp = styled.SafeAreaView`
-  width:50%;
-  height:180px;
+  width:90%;
+  height:40px;
   align-items:center;
   justify-content: center;
+  border-color:#fafafa;
+  border-width:1px;
+  align-self:center;
+  margin: 4%;
+
+
 `;
 export const TopImage = styled.Image`
-  width:180px;
-  height:180px;
+  width:250px;
+  height:170px;
 `;
 export const TopInfoText = styled.Text`
   font-size: 16px;
@@ -107,12 +113,14 @@ export const ProductInfoText = styled.Text`
   color: #934fd6;
 `;
 export const CartButtom = styled.TouchableOpacity`
-  width:100px;
+  width:90%;
   height:40px;
   background-color: #934fd6;
   align-items: center;
   justify-content: center;
   border-radius:8px;
+  align-self:center;
+  margin-top: 4%;
 `;
 export const CartImage = styled.Image`
   width: 25px;

@@ -3,9 +3,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Image, StyleSheet, View, Text } from "react-native";
 import HomePage from "../screens/Home";
 import CartPage from "../screens/Cart";
+import BuyPage from "../screens/Buy"
 import { useCart } from "../context/cart";
 import HomeIcon from "../assets/home.png";
 import CartIcon from "../assets/shopping-cart.png";
+import BuyIcon from "../assets/wallet.png";
 
 const tab = createBottomTabNavigator();
 export default () => {
@@ -18,11 +20,11 @@ export default () => {
         style: {
           elevation: 0,
           backgroundColor: "#ffffff",
-          height: 70,
+          height: 60,
           ...style.shadow,
           alignItems: "center",
-          marginRight: 15,
-          marginLeft: 15,
+          marginRight: 5,
+          marginLeft: 5,
           bottom: 5,
           alignSelf: "center",
           borderRadius: 18,
@@ -40,6 +42,11 @@ export default () => {
         component={CartPage}
         options={{ tabBarIcon: iconCart,tabBarBadge:cart.length}}
       />
+       <tab.Screen
+        name="Compras"
+        component={BuyPage}
+        options={{ tabBarIcon: buyIcon}}
+      />
     </tab.Navigator>
   );
 };
@@ -48,20 +55,20 @@ export const iconCart = ({focused}) => {
   return (
     <View
       style={{
-        width: 55,
-        height: 55,
+        width: 50,
+        height: 50,
         alignItems: "center",
         justifyContent: "center",
         alignSelf: "center",
         marginRight: 15,
         flexDirection:'row',
-        backgroundColor:focused ? "#f7d86d" : "#fff",
+        backgroundColor:focused ? "#934fd6" : "#fff",
         borderRadius:12
       }}
     >
       <Image
         source={CartIcon}
-        style={{ width: 35, height: 35, tintColor: "#000",alignSelf:'center',marginLeft:12 }}
+        style={{ width: 25, height: 25, tintColor: focused ? "#fff" : "#934fd6",alignSelf:'center',marginLeft:12 }}
       />
       <Text style={{backgroundColor:'#f00',borderRadius:18,marginBottom:15,marginRight:14}}></Text>
     </View>
@@ -71,19 +78,40 @@ export const homeIcon = ({focused}) => {
   return (
     <View
       style={{
-        width: 55,
-        height: 55,
+        width: 50,
+        height: 50,
         alignItems: "center",
         justifyContent: "center",
         alignSelf: "center",
         marginRight: 15,
-        backgroundColor:focused ? "#f7d86d" : "#fff",
+        backgroundColor:focused ? "#934fd6" : "#fff",
         borderRadius:12
       }}
     >
       <Image
         source={HomeIcon}
-        style={{ width: 35, height: 35, tintColor: "#000" }}
+        style={{ width: 25, height: 25, tintColor: focused ? "#fff" : "#934fd6" }}
+      />
+    </View>
+  );
+};
+export const buyIcon = ({focused}) => {
+  return (
+    <View
+      style={{
+        width: 50,
+        height: 50,
+        alignItems: "center",
+        justifyContent: "center",
+        alignSelf: "center",
+        marginRight: 15,
+        backgroundColor:focused ? "#934fd6" : "#fff",
+        borderRadius:12
+      }}
+    >
+      <Image
+        source={BuyIcon}
+        style={{ width: 25, height: 25, tintColor:  focused ? "#fff" : "#934fd6" }}
       />
     </View>
   );

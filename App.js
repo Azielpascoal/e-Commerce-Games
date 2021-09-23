@@ -19,7 +19,7 @@ export default function e_commerceApp() {
     return (
       <CartProvider>
         <NavigationContainer>
-          <StatusBar style="dark" />
+          <StatusBar style="light" />
           <MainStack />
         </NavigationContainer>
       </CartProvider>

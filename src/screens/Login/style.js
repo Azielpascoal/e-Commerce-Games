@@ -8,8 +8,13 @@ export const Container = styled.SafeAreaView`
     background-color:#fff;
 `;
 export const Image = styled.Image`
-    width:100px;
-    height:100px;
+    width:80px;
+    height:80px;
+`;
+export const ImageLogin = styled.Image`
+   tint-color:#fff;
+   width:35px;
+   height: 25px;
 `;
 export const ImageS = styled.Image`
     margin-top: 4%;
@@ -18,7 +23,7 @@ export const ImageS = styled.Image`
 `;
 export const Text = styled.Text`
     font-size: 14px;
-    color:#ffff;
+    color:#934fd6;
     text-align: center;
     font-family: Poppins-Regular;
     position: relative;
@@ -26,42 +31,50 @@ export const Text = styled.Text`
 `;
 export const TextClick = styled.Text`
     font-size: 14px;
-    color:#934fd6;
-    text-align: center;
+    color:#fff;
     font-family: Poppins-Regular;
-    position: relative;
+    padding-left: 12px;
     
 `;
 export const Buttom = styled.TouchableOpacity`
-    width:250px;
+    width:70px;
     height:45px;
-    border-radius: 18px;
-    background-color:#6600c4;
+    border-radius: 12px;
+    background-color:#6200c4;
     justify-content: center;
     align-items: center;
+    margin-top: -30px;
 `;
 export const ButtomClick = styled.TouchableOpacity`
    
     border-radius: 18px;
     justify-content: center;
     align-items: center;
-    margin-top: 4%;
+    margin-top: 14%;
 `;
 export const ButtomArea = styled.SafeAreaView`
     width: 100%;
-    height:30%;
-    background-color: #934fd6;;
-    border-top-right-radius:45px;
-    border-top-left-radius:45px;
+    height:25%;
+    background-color: #fff;
     align-items:center;
     justify-content: center;
 `;
 export const InfoArea = styled.SafeAreaView`
     width: 100%;
-    height:70%;
-    align-items:center;
+    height:75%;
+    border-bottom-right-radius:35px;
+    border-bottom-left-radius:35px;
     justify-content: center;
-    padding-bottom: 10%;
+    padding-left:20px;
+    background-color: #934fd6;
   
    
+`;
+export const InputArea = styled.SafeAreaView`
+    width:90%;
+    height:340px;
+    align-items: center;
+    padding-top: 8%;
+    margin-top:2%;
+    margin-left:2.5%;
 `;

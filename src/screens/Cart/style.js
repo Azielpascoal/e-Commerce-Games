@@ -7,25 +7,69 @@ export const Container = styled.SafeAreaView`
 `;
 export const Top = styled.SafeAreaView`
   width: 100%;
-  height: 250px;
-  background-color: #f7d86d;
+  background-color: #fff;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 `;
+export const TopInfo = styled.SafeAreaView`
+  width:90%;
+  height: 80px;
+  align-self: center;
+  align-self: center;
+  justify-content:center;
+  margin-top:4%;
+`;
+export const TopInfoArea = styled.SafeAreaView`
+  width: 92%;
+  height: 180px;
+  border-radius:22px;
+  background-color: #934fd6;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: row;
+  margin-top: 2%;
+`;
+export const TopInfoAreaComp = styled.SafeAreaView`
+  width:50%;
+  height:180px;
+  align-items:center;
+  justify-content: center;
+`;
+export const TopImage = styled.Image`
+  width:180px;
+  height:180px;
+`;
+export const TopInfoText = styled.Text`
+  font-size: 16px;
+  font-family: Poppins-Medium;
+  color: #fff;
+  
+`;
+export const TopButtom = styled.TouchableOpacity`
+  width:120px;
+  height:40px;
+  background-color: #6200c4;
+  align-items: center;
+  justify-content: center;
+  border-radius:8px;
+  margin-top: 16%;
+`;
+export const TopButtomText = styled.Text`
+  font-size: 12px;
+  font-family: Poppins-Regular;
+  color: #fff;
+`;
+
 export const ProductArea = styled.ScrollView`
   width: 100%;
   flex: 1;
-  border-top-right-radius: 35px;
-  margin-top: -60px;
   background-color: #fff;
   padding:4%;
 `;
 export const ProductCard = styled.SafeAreaView`
   width: 100%;
-  height: 190px;
+  height: 180px;
   border-radius: 15px;
-  border-color: #f1f1f1;
-  border-width: 1px;
   flex-direction: row;
   align-self: center;
   margin-top: 4%;
@@ -41,7 +85,7 @@ export const ProductImage = styled.Image`
 `;
 export const ProductInfoArea = styled.SafeAreaView`
   width: 60%;
-  height: 100px;
+  height: 150px;
   margin-left: 2%;
   border-color:#fafafa;
   border-width: 1px;
@@ -52,24 +96,25 @@ export const ProductInfoArea = styled.SafeAreaView`
 export const InfoText = styled.Text`
   font-size: 16px;
   font-family: Poppins-Medium;
-  color: #1a2a3a;
+  color: #934fd6;
+  text-align:center;
 `;
 export const ProductInfoText = styled.Text`
   font-size: 12px;
   font-family: Poppins-Regular;
-  color: #1a2a3a;
+  color: #934fd6;
 `;
 export const CartButtom = styled.TouchableOpacity`
-width:100px;
+  width:100px;
   height:40px;
-  background-color: #f7d86d;
+  background-color: #934fd6;
   align-items: center;
   justify-content: center;
   border-radius:8px;
   flex-direction: row;
-  `;
+`;
 export const CartImage = styled.Image`
   width: 25px;
   height: 25px;
-  tint-color:#1a2a3a;
+  tint-color:#fff;
 `;
