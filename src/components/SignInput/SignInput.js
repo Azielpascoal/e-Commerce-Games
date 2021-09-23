@@ -18,11 +18,13 @@ export default ({ placeholder, password, value,onChangeText, IsError, IsSuccess,
             onChange={onChange}
             password={password}
             viewPass
-            placeholderTextColor="#dddddd"
-            iconColor="#000"
+            placeholderTextColor="#fafafa"
+            iconColor="#934fd6"
             onBlur={onBlur}
             autoFocus={focus}
             type={type}
+            color="#fff"
+            selectionColor="#934fd6"
         />
         </InputArea>
 
@@ -34,8 +36,10 @@ const style = StyleSheet.create({
         height: 38,
         fontSize: 14,
         fontFamily: 'Poppins-Regular',
-        color: '#1A2A3A',
-        borderColor:'#fff'
+        color: '#fff',
+        borderColor:'#6600c4',
+        backgroundColor:"#6600c4"
+
         
         // alignItems: center,
     }
