@@ -5,10 +5,10 @@ import styled from 'styled-components/native'
 
 export const InputArea= styled.SafeAreaView`
     width:98%;
-    height:45px;
+    height:48px;
     flex-direction: row;
-    background-color:#fff;
-    border-radius:6px;
+    background-color:#6600c4;
+    border-radius:12px;
     border-width:1px;
     border-color: ${props => props.IsError ? "#E41C31" : "#6200c4" && props.IsSuccess ? "#55BC7E" : "#6200c4" };
     align-items: center;
@@ -32,4 +32,5 @@ export const Icon = styled.Image`
     height: 24px;
     margin-left: 2%;
     border-radius: 8px;
+    tint-color:#fff;
 `;
