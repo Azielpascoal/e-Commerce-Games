@@ -24,14 +24,17 @@ import { useCart } from "../../context/cart";
 import CartIcon from "../../assets/remove-from-cart.png";
 import ConfirmaIcon from "../../assets/shopping-cart.png";
 import { useNavigation } from "@react-navigation/native";
+import TopB from "../../components/Top/headertop";
 export default function Home() {
   const navigation = useNavigation();
   const { remove, cart, totalvalue, subtotalvalue, setCart } = useCart();
-  function confirmPress() {
+  function confirmPress({index}) {
     navigation.navigate("Compras");
+    remove(index);
   }
   return (
     <Container>
+      <TopB/>
       <Top>
         <TopInfo>
           <TopInfoText
