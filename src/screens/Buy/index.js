@@ -40,7 +40,7 @@ export default function Home() {
     } else {
       alert(
         "Compra efectuada ! " +
-          "O seu pagmento é  :$" +
+          "O seu pagmento é  :AOA" +
           totalvalue +
           " com a taxa de frete adicionada."
       );
@@ -77,13 +77,13 @@ export default function Home() {
           <ProductInfoText >
             Compra efectuada no valor de : 
           </ProductInfoText>
-          <ProductInfoText > ${subtotalvalue}</ProductInfoText>
+          <ProductInfoText > AOA{subtotalvalue}</ProductInfoText>
         
         </TopInfoAreaComp>
         <TopInfoAreaComp>
         <ProductInfoText>Valor total a pagar : </ProductInfoText>
          
-          <ProductInfoText>${totalvalue}</ProductInfoText>
+          <ProductInfoText>AOA{totalvalue}</ProductInfoText>
         </TopInfoAreaComp>
       </TopInfo>
       <CartButtom onPress={confirmPress}  style={{...style.shadow}}>
