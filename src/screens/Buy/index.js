@@ -77,13 +77,13 @@ export default function Home() {
           <ProductInfoText >
             Compra efectuada no valor de : 
           </ProductInfoText>
-          <ProductInfoText > AOA{subtotalvalue}</ProductInfoText>
+          <ProductInfoText > AOA {subtotalvalue}</ProductInfoText>
         
         </TopInfoAreaComp>
         <TopInfoAreaComp>
         <ProductInfoText>Valor total a pagar : </ProductInfoText>
          
-          <ProductInfoText>AOA{totalvalue}</ProductInfoText>
+          <ProductInfoText>AOA {totalvalue}</ProductInfoText>
         </TopInfoAreaComp>
       </TopInfo>
       <CartButtom onPress={confirmPress}  style={{...style.shadow}}>
