@@ -84,7 +84,7 @@ export default function Home() {
                 <ProductImage source={{ uri: item.image }} />
                 <ProductInfoArea>
                   <ProductInfoText>Nome: {item.name}</ProductInfoText>
-                  <ProductInfoText>Preço: ${item.price}</ProductInfoText>
+                  <ProductInfoText>Preço: AOA{item.price}</ProductInfoText>
                   <AirbnbRating
                     ratingBackgroundColor="#c8c7c8"
                     defaultRating={item.score / 50}
