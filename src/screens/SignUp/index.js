@@ -34,7 +34,7 @@ export default function Splash() {
         <TextClick>BEM-VINDO AO ONSHOP</TextClick>
         <TextClick>FAÇA SEU CADASTRO</TextClick>
         <InputArea>
-        <SignInput placeholder="DIGITE SEU NOME COMPLETO" type="email-address" source={Nome}/>
+        <SignInput placeholder="DIGITE SEU Nº DO BILHETE" type="email-address" source={Nome}/>
         <SignInput placeholder="DIGITE SEU EMAIL" type="email-address" source={Email}/>
           <SignInput placeholder="DIGITE SUA SENHA"  password source={Password}/>
         </InputArea>
