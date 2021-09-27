@@ -81,7 +81,7 @@ export default function Home() {
         
         </TopInfoAreaComp>
         <TopInfoAreaComp>
-        <ProductInfoText>Valor total a pagar : </ProductInfoText>
+        <ProductInfoText>Valor total a pagar com custo de entrega : </ProductInfoText>
          
           <ProductInfoText>AOA {totalvalue}</ProductInfoText>
         </TopInfoAreaComp>
